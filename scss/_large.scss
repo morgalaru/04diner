@@ -1,0 +1,33 @@
+header, nav, main, footer {
+    max-width: 60rem;
+    margin: auto;
+    button{display: none;}
+}
+
+//NAV
+nav{
+    ul, ul.open{
+        display: flex;
+        border: none;
+        margin-left: 2vw;
+        justify-content: right;
+    } // end ul
+
+    ul li {border: none;}
+
+} //end nav
+
+
+// MAIN 
+div.allCards {
+    section {
+        flex-basis: calc(33.333% - (($gutter*2)/3))
+    }
+}
+
+
+// FOOTER
+footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

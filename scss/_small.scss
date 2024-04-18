@@ -1,0 +1,171 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+  
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $primaryColor;
+    background-color: $backgroundColor;
+}
+
+//header
+#headerWrapper {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: $boldWeight;
+    }
+    button {
+        margin-left: auto;
+        padding: .5rem;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+    }
+} 
+
+//nav
+#navWrapper {
+    background-color: lighten($secondaryColor, 15%);
+}
+
+nav {
+    ul{
+        display: none;
+        border-top: solid .5px rgba(37, 77, 69, .5);
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    ul.open {display:block}
+
+    ul li{
+        border-bottom: solid .5px rgba(37, 77, 69, .5);
+    }
+
+    ul li a {
+        display: block;
+        text-decoration: none;
+        color: $primaryColor;
+        padding: .9rem 2vw;
+        font-weight:500;
+    } // end anchors
+
+    li.active {background-color: lighten($secondaryColor, 10%);}
+    li a:hover {background-color: lighten($secondaryColor, 12%)}
+}
+
+
+// MAIN
+#mainWrapper h1 {
+    padding: 0 $gutter;
+}
+
+div.allCards {
+    padding: 0 $gutter;
+    section{
+        border: .5px solid $secondaryColor;
+        background-color: darken($backgroundColor, 5%);
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem 0;
+        h2, p, img{
+            margin: 0;
+            padding: 1rem $gutter;
+        }
+        h2{
+            background-color: $primaryColor;
+            font-size: 1.5rem;
+            color: lighten($secondaryColor, 10%);
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        img.e2e {padding: 0;}
+        p {
+            font-style: italic;
+        }
+        a{
+            display: block;
+            background-color: $primaryColor;
+            padding: .75rem;
+            text-align: center;
+            margin: 0 3rem 1rem 3rem;
+            border-radius: 8px;
+            color: $backgroundColor;
+            text-decoration: none;
+        }
+    }
+} // end all cards
+
+
+
+
+
+
+// begin footer
+#footerWrapper {
+    background-color: $primaryColor;
+    padding: 1rem $gutter;
+    color: $backgroundColor;
+
+
+    section.contact{
+        p{margin: .5rem;}
+        ion-icon{
+            color: $secondaryColor;
+            padding-right: 7px;
+        }
+        a {
+            color: $backgroundColor;
+            text-decoration: none;
+        }
+    } // end contact
+
+    section.social {
+        display: flex;
+        justify-content: center;
+        a {
+            display: block;
+            font-size: 2rem;
+            margin: .7rem;
+            color: $secondaryColor;
+            &:hover{color: darken($secondaryColor, 10%)}
+        }
+    } // end social
+
+    section.location{
+        margin: 1rem $gutter;
+    } // end location
+
+    p.legal {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        margin: 1.5rem;
+    }
+}
