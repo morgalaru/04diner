@@ -339,6 +339,7 @@ body {
 }
 
 header {
+  padding: 1.5rem 16px;
   display: flex;
   align-items: center;
   gap: 10px;

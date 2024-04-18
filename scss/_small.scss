@@ -27,6 +27,7 @@ body {
     color: $secondaryColor;
 }
 header {
+    padding: 1.5rem $gutter;
     display: flex;
     align-items: center;
     gap: 10px;
