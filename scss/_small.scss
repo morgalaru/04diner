@@ -112,13 +112,14 @@ div.allCards {
         }
         a{
             display: block;
-            background-color: $primaryColor;
+            background-color: lighten($secondaryColor, 15%);
             padding: .75rem;
             text-align: center;
             margin: 0 3rem 1rem 3rem;
             border-radius: 8px;
-            color: $backgroundColor;
+            color: $primaryColor;
             text-decoration: none;
+            &:hover{background-color: lighten($secondaryColor, 5%);}
         }
     }
 } // end all cards
